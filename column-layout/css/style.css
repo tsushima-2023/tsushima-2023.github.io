@@ -1,0 +1,120 @@
+@charset "utf-8";
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+img{
+vertical-align: bottom;
+max-width: 100%;
+}
+a{
+text-decoration: none;
+}
+body{
+background-color: #ffb561;
+}
+h1{
+text-align: center;
+margin: 40px 0;
+color: #7e520c;
+font-family: 'Sacramento', cursive;
+font-size: 68px;
+}
+.column-wrapper{
+width: 90%;
+margin: 0 auto 100px;
+columns: 4; /* 4列になる */
+gap: 30px;
+}
+.box{
+break-inside: avoid; /* columnsと必ずセット(要素内で改行されないようにする) */
+background-color: #ffffb8;
+padding: 20px;
+border-radius: 15px;
+margin-bottom: 30px;
+border: 8px double #7e520c;
+}
+.box img{
+border-radius: 5px;
+}
+.photo{
+margin-bottom: 10px;
+}
+.txt{
+line-height: 1.8;
+text-align: center;
+}
+#more-btn{
+display: none;
+margin-bottom: 50px;
+/* width: 200px;
+height: 44px;
+background-color: #7e520c;
+color: #fff3e1;
+text-align: center;
+line-height: 44px;
+margin: 0 auto 15px;
+border-radius: 15px; */
+}
+/* ボタンのスニベット */
+.button01 a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 300px;
+    color: #fff3e1;
+    font-size: 18px;
+    font-weight: 700;
+    background-color:  #7e520c;
+    transition: 0.3s;
+    border-radius: 15px;
+  }
+  
+  .button01 a::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #fff3e1;
+    border-right: 3px solid #fff3e1;
+    transform: rotate(45deg);
+  }
+  
+  .button01 a:hover {
+    text-decoration: none;
+    background-color: #ffffb8;
+    color: #7e520c;
+  }
+
+@media(max-width:960px){
+h1{
+font-size: 58px;
+}
+.column-wrapper{
+columns: 3;
+gap: 20px;
+}
+.box{
+margin-bottom: 20px;
+}
+}
+@media(max-width:640px){
+h1{
+font-size: 48px;
+}
+.column-wrapper{
+columns: 2;
+gap: 14px;
+}
+.box{
+margin-bottom: 14px;
+}
+.box:nth-of-type(n+9){
+display: none;
+}
+#more-btn{
+display: block;
+}
+}

@@ -1,0 +1,115 @@
+1月31日～2月3日
+
+制作物：レストランサイト（レスポンシブ）
+
+ページ構成：シングルページ
+
+ページ内容：
+１、ヒーローヘッダー（スライダー）
+　　・Bxslider参照
+　　・画像をul,liで囲う
+<div class="main-visual">
+    <ul class="bxslider">
+        <li><img src="img/slide-01.jpg" alt=""></li>
+        <li><img src="img/slide-02.jpg" alt=""></li>
+        <li><img src="img/slide-03.jpg" alt=""></li>
+    </ul>
+</div>
+　　・cssファイルで大きさの指定をする
+.main-visual{　※ひと画面分の大きさに指定
+width: 100%;
+height: 100vh;
+}
+.main-visual li{　※object-fitをかけたいものの親要素なので幅と高さを指定
+width: 100%;
+height: 100vh;
+}
+.main-visual img{　※img要素にobject-fit coverをかける　
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+　　
+
+２、PCからハンバーガーメニュー
+３、お知らせ（ajax）
+
+４、動画データ（youtubeからデータを持ってくる）
+    ・動画を選び、共有から埋め込むでhtmlファイルの<div class="video-wrapper">タグ内に貼り付け
+　　・iframeの幅、高さを削除→クラス名(ytubeなど)をつけてcssファイルへ
+　　・クラス名をつけたものは幅、高さともに必ず100％
+　　・その親要素にmax-width(800pxくらい)、またheightではなく
+　　　aspect-ratio: 16 / 9; の指定をする
+　　・marginで中央にもってくる
+
+５、メニュー部分をモーダルウィンドウ
+　　・lightbox2参照
+
+６、店舗情報にgoogleMapとSNSを埋め込む
+７、お問い合わせフォームを埋め込む（GoogleForm）
+
+使用するプラグイン：
+・Bxslider
+https://bxslider.com/
+①bxslider関数を呼び出す
+$(function(){
+$('.bxslider').bxSlider(③);
+});
+②cssファイルから検索置換（Ctrl+H）で../img/に変換する
+③場合によっては｛}を使い、設定の入力をする（jsファイルからコピーしてくる）
+mode: 'fade', //画像が切り替わるモードの設定
+auto: true, //自動で切り替わる設定
+pause: 3800, //切り替わる速さの設定
+controls: false, //矢印を消す設定
+pager: false, //黒い丸を消す設定
+
+・LIghtbox2
+https://lokeshdhakar.com/projects/lightbox2/
+①クリックしたらモーダルしたいものに対して<a>タグで囲う
+②<a href="img/menu-02.jpg" data-lightbox="photo">
+　href内にimgタグで表示した画像と同じコードを入力、その後ろには必ずdata-lightbox=""ですべて統一のグループ名を入力する
+③cssファイルとjsファイルを読み込ませ、cssファイルのimages/をimg/に変換する
+
+
+・hambuegers.css
+https://jonsuh.com/hamburgers/
+①このままコピーしてindex.htmlにペーストする
+<p class="hamburger " id="ham-btn">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</p>
+②サイトから好きな動きのものを選びclass名の後ろにコピーして貼り付け
+③貼り付けた後ろにis-activeを入力しブラウザで×のマークになっているか確認し、確認出来たら消す
+④jqueryでクラス名をtoggleさせる
+　$('#ham-btn').on('click',function(){
+            $(this).toggleClass('is-active');
+        });
+　
+
+制作ポイント：
+・css変数を使ったカラーマネージメント
+①style.cssの文字コードの下に入力 
+:root{
+--main_color:(カラーコード);
+}
+②使いたい部分にvarを使って入力する
+color: var(--main_color);
+
+・疑似要素(::)でdata属性やアイコンを表示
+・PCからSPまでハンバーガーメニュー
+
+用意する画像データ：
+・ヒーローヘッダーで使用する画像３枚（1920×1080以上(object-fitをかける)）slide-01～03.jpg
+・メニュー部分で使用する画像６枚（800×600に揃える(Photoshopでアセットする)）menu01～06.jpg
+・タッチアイコン用画像192px×192px（touch-icon.png）
+・ファビコン用画像32px×32px（favicon.png）
+
+
+予約フォームの項目：
+・お名前（必須）
+・メールアドレス（必須）
+・電話番号
+・人数（必須）
+・日時（必須）
+・備考欄

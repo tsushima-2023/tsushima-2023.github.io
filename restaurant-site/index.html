@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レストランサイトの制作</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="touch-icon.png">
+</head>
+<body id="top">
+<header>
+    <h1>ロゴ</h1>
+</header>
+<p class="hamburger hamburger--spring" id="ham-btn">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+</p>
+<nav id="g-nav">
+    <div class="nav-img">
+        <img src="img/nav.jpg" alt="">
+    </div>
+    <ul>
+        <li><a href="#top" data-en="TOP">トップ</a></li>
+        <li><a href="#news" data-en="NEWS">お知らせ</a></li>
+        <li><a href="#video" data-en="VIDEO">動画</a></li>
+        <li><a href="#menu" data-en="MENU">メニュー</a></li>
+        <li><a href="#shop" data-en="SHOP">店舗情報</a></li>
+        <li><a href="#reserve" data-en="RESERVE">ご予約</a></li>
+    </ul>
+</nav>
+<div class="main-visual">
+    <ul class="bxslider">
+        <li><img src="img/slide-01.jpg" alt=""></li>
+        <li><img src="img/slide-02.jpg" alt=""></li>
+        <li><img src="img/slide-03.jpg" alt=""></li>
+    </ul>
+</div>
+<main>
+    <div id="news">
+        <h2 data-en="NEWS">お知らせ</h2>
+        <dl id="news-list">
+        </dl>
+    </div> <!-- /#news -->
+    <div id="video">
+        <h2 data-en="VIDEO">動画</h2>
+        <div class="video-wrapper">
+            <iframe class="ytube" src="https://www.youtube.com/embed/BywDOO99Ia0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div> <!-- /#video -->
+    <div id="menu">
+        <h2 data-en="MENU">メニュー</h2>
+        <div class="scroll-wrapper">
+            <div class="scroll-box">
+                <a href="img/menu-01.jpg" data-lightbox="photo" data-title="Coffee-Set">
+                    <p class="photo"><img src="img/menu-01.jpg" alt=""></p>
+                    <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum laboriosam qui quo consectetur esse!</p>
+                </a>
+            </div> <!-- /.scroll-box -->
+            <div class="scroll-box">
+                <a href="img/menu-02.jpg" data-lightbox="photo" data-title="Potato-Set">
+                    <p class="photo"><img src="img/menu-02.jpg" alt=""></p>
+                    <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum laboriosam qui quo consectetur esse!</p>
+                </a>
+            </div> <!-- /.scroll-box -->
+            <div class="scroll-box">
+                <a href="img/menu-03.jpg" data-lightbox="photo" data-title="
+                Fruit Sandwiches">
+                    <p class="photo"><img src="img/menu-03.jpg" alt=""></p>
+                    <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum laboriosam qui quo consectetur esse!</p>
+                </a>
+            </div> <!-- /.scroll-box -->
+            <div class="scroll-box">
+                <a href="img/menu-04.jpg" data-lightbox="photo" data-title="
+                Dinner_1">
+                    <p class="photo"><img src="img/menu-04.jpg" alt=""></p>
+                    <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum laboriosam qui quo consectetur esse!</p>
+                </a>
+            </div> <!-- /.scroll-box -->
+            <div class="scroll-box">
+                <a href="img/menu-05.jpg" data-lightbox="photo" data-title="
+                Dinner_2">
+                    <p class="photo"><img src="img/menu-05.jpg" alt=""></p>
+                    <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum laboriosam qui quo consectetur esse!</p>
+                </a>
+            </div> <!-- /.scroll-box -->
+            <div class="scroll-box">
+                <a href="img/menu-06.jpg" data-lightbox="photo" data-title="
+                Desert">
+                    <p class="photo"><img src="img/menu-06.jpg" alt=""></p>
+                    <p class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum laboriosam qui quo consectetur esse!</p>
+                </a>
+            </div> <!-- /.scroll-box -->
+        </div> <!-- /.scroll-wrapper -->
+    </div> <!-- /#menu -->
+    <div id="shop">
+        <h2 data-en="SHOP">店舗情報</h2>
+        <div class="shop-wrapper">
+            <div class="sns">
+                <a class="twitter-timeline" data-width="350" data-height="500" data-theme="light" href="https://twitter.com/city_toshima?ref_src=twsrc%5Etfw">Tweets by city_toshima</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div> <!-- /.sns -->
+            <div class="map">
+                <iframe class="g-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.866276350435!2d139.70871141474757!3d35.729507134931254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5d4043e0dd%3A0x213775d25d2b034d!2z5rGg6KKL6aeF!5e0!3m2!1sja!2sjp!4v1675415000541!5m2!1sja!2sjp"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div> <!-- /.map -->
+        </div> <!-- /.shop-wrapper -->
+    </div> <!-- /#shop -->
+    <div id="reserve">
+        <h2 data-en="RESERVE">ご予約</h2>
+        <div class="form">
+            <iframe class="g-form" src="https://docs.google.com/forms/d/e/1FAIpQLSc0l2GTEujyLAroTALRLs-8RC7BaSgk8j6E_Jxzio68jbdrMA/viewform?embedded=true"  height="1252" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+        </div> <!-- /.g-form -->
+    </div> <!-- /#reserve -->
+</main>
+<footer>
+    <p><small>&copy; <span id="this-year"></span> Ristorante FELICA</small></p>
+</footer>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js' integrity='sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==' crossorigin='anonymous'></script>
+<script src="js/jquery.bxslider.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

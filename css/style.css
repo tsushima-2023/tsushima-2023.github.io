@@ -6,6 +6,8 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,:after,:before{backgr
     height: 100vh;
     position: fixed;
     z-index: -1;
+    top: 0;
+    left: 0;
 }
 .video-wrapper>video{
     object-fit: cover;
@@ -28,4 +30,20 @@ html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,:after,:before{backgr
 .txt-box>p{
     font-size: 20px;
     line-height: 2.5;
+}
+
+@media (max-width:860px){
+    .txt-box{
+        width: 80%;
+        margin: 10% auto;
+        right: 0;
+        left: 0;
+    }
+    .txt-box>h1{
+        font-size: 32px;
+    }
+    .txt-box>p{
+        font-size: 16px;
+        line-height: 2;
+    }
 }

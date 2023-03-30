@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srcsetの使い方</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    img{
+
+        max-width: 100%;
+        vertical-align: bottom;
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    p{
+        text-align: center;
+    }
+    .visual{
+        max-width: 960px;
+        margin: 50px auto;
+    }
+    
+</style>
+</head>
+<body>
+<!-- srcsetとはブラウザのスクリーン要件(幅、高さ、ピクセル密度)に応じて、異なる画像を読み込む事ができる -->
+<!-- picture要素を使うと、画面解像度や画面幅、画像形式等に基づいて、開発者が任意の画像を出し分けることが可能 -->
+<!-- picture要素は複数のsource要素と一つのimg要素で構成される -->
+<!-- source要素は、media属性(メディアクエリ)・srcset属性・sizes属性の3つの属性が指定可能 -->
+<!-- media属性にはcssと同じようにmax-widthやmin-widthを指定する -->
+<!-- srcset属性には画像ファイルのパスと画像ファイルの横幅(画像自体の横幅)を指定する -->
+<!-- sizes属性には表示する画像の横幅を記述する -->
+
+<h1>srcsetの使い方</h1>
+<p>801px以上の時はpc画像（960px×400px）を表示、<br>800~641pxまでタブレット用画像（800px×400px）を表示、<br>640px以下になったらsp画像（640px×640px）を表示</p>
+<div class="visual">
+    <picture>
+        <source media="(min-width:801px)" srcset="img/pc-1.jpg 960w" sizes="100vw">
+        <source media="(min-width:641px)" srcset="img/tab-1.jpg 800w" sizes="100vw">
+        <img media="(max-width:640px)" srcset="img/sp-1.jpg 640w" sizes="100vw" alt="">
+    </picture>
+</div>
+    
+</body>
+</html>

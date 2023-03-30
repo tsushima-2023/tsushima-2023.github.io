@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スプリットレイアウトの作成</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+    <div class="container">
+        <div class="main-visual">
+        <img src="img/01.jpg" alt="">
+        </div>
+    
+        <main>
+            <nav class="g-nav">
+            <ul>
+            <li><a href="#content-1">content-1</a></li>
+            <li><a href="#content-2">content-2</a></li>
+            <li><a href="#content-3">content-3</a></li>
+            </ul>
+            </nav>
+            
+            <div class="content-box" id="content-1">
+              <h2>content-1</h2>
+              <div class="main-box">
+                 <h3>Lorem ipsum dolor sit amet.</h3>
+                 <img src="img/04.jpg" alt="">
+              </div>
+           
+            <div class="sub-wrapper">
+               <div class="sub-box">
+                   <h3>Lorem, ipsum dolor.</h3>
+                   <img src="img/05.jpg" alt="">
+                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam velit laudantium aperiam impedit quo quisquam corporis incidunt at porro accusamus commodi nobis, totam quae saepe atque!</p>
+               </div>
+               <div class="sub-box">
+                   <h3>Lorem, ipsum dolor.</h3>
+                   <img src="img/06.jpg" alt="">
+                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam velit laudantium aperiam impedit quo quisquam corporis incidunt at porro accusamus commodi nobis, totam quae saepe atque!</p>
+               </div>
+               <div class="sub-box">
+                   <h3>Lorem, ipsum dolor.</h3>
+                   <img src="img/07.jpg" alt="">
+                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam velit laudantium aperiam impedit quo quisquam corporis incidunt at porro accusamus commodi nobis, totam quae saepe atque!</p>
+               </div>
+            </div>
+            </div><!-- /.content-box -->
+        </main>
+    </div> <!-- /.container -->
+
+    <div class="container">
+        <div class="main-visual">
+            <img src="img/02.jpg" alt="">
+        </div>
+        <main>
+            <div class="content-box" id="content-2">
+            <h2>content-2</h2>
+            <div class="main-box">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <img src="img/08.jpg" alt="">
+             </div>
+
+            <div class="sub-wrapper">
+                <div class="sub-box">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <img src="img/09.jpg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam velit laudantium aperiam impedit quo quisquam corporis incidunt at porro accusamus commodi nobis, totam quae saepe atque!</p>
+                </div>
+                <div class="sub-box">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <img src="img/10.jpg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam velit laudantium aperiam impedit quo quisquam corporis incidunt at porro accusamus commodi nobis, totam quae saepe atque!</p>
+                </div>
+                <div class="sub-box">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <img src="img/11.jpg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam velit laudantium aperiam impedit quo quisquam corporis incidunt at porro accusamus commodi nobis, totam quae saepe atque!</p>
+                </div>
+            </div>
+
+
+            </div><!-- /.content-box -->
+        </main>
+    </div> <!-- /.container -->
+
+    <div class="container">
+        <div class="main-visual">
+            <img src="img/03.jpg" alt="">
+        </div>
+        <main>
+            <div class="content-box" id="content-3">
+            <h2>content-3</h2>
+            <div class="main-box">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <img src="img/12.jpg" alt="">
+             </div>
+
+            <div class="sub-wrapper">
+                <div class="sub-box">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <img src="img/13.jpg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam velit laudantium aperiam impedit quo quisquam corporis incidunt at porro accusamus commodi nobis, totam quae saepe atque!</p>
+                </div>
+                <div class="sub-box">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <img src="img/14.jpg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam velit laudantium aperiam impedit quo quisquam corporis incidunt at porro accusamus commodi nobis, totam quae saepe atque!</p>
+                </div>
+                <div class="sub-box">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <img src="img/15.jpg" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam velit laudantium aperiam impedit quo quisquam corporis incidunt at porro accusamus commodi nobis, totam quae saepe atque!</p>
+                </div>
+            </div>
+        </div><!-- /.content-box -->
+        </main>
+    </div> <!-- /.container -->
+
+    <footer>
+        <p class="to-top"><a href="#top"><img src="img/to-top.svg" alt=""></a></p> <!-- bodyにid名をつける -->
+        <form>
+            <dl class="form-list">
+                <dt>お名前</dt>
+                <dd><input type="text" placeholder="お名前を入力して下さい" name="" required></dd>
+                <dt>メールアドレス</dt>
+                <dd><input type="email" placeholder="メールアドレスを入力して下さい" required></dd>
+                <dt>性別</dt>
+                <dd><label for="male"><input type="radio" name="gender" id="male">男性</label>
+                    <label for="female"><input type="radio" name="gender" id="female">女性</label></dd>
+                <dt>生年月日</dt>
+                <dd>
+                    <select>
+                        <script>
+                            //1945~2000になるまで１ずつ増やす
+                            for(var i = 1945; i<2001; i++){
+                            document.write('<option>' +i+ '年</option>');
+                            }
+                        </script>
+                    </select>
+                </dd>
+                <dt>お問い合わせ内容</dt>
+                <dd><textarea placeholder="お問い合わせ内容をご記入下さい"></textarea></dd>
+            </dl>
+            <input type="submit" value="送信">
+        </form>
+    </footer>
+    
+</body>
+</html>

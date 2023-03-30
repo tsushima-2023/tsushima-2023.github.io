@@ -1,0 +1,169 @@
+@charset "utf-8";
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+img{
+vertical-align: bottom;
+max-width: 100%;
+}
+a{
+text-decoration: none;
+}
+ul{
+list-style: none;
+}
+
+html{
+scroll-behavior: smooth;/* スムーススクロールの設定 */
+}
+.container{
+display: flex;
+}
+.main-visual{
+width: 50%;
+height: 100vh; /* ひと画面分の高さ(基本的に1920×1080) 今回は画面の半分なので画像を960×1080よりも大きいサイズで用意した*/
+position: sticky; /* 親要素内での固定 */
+left: 0;
+top: 0;
+}
+.main-visual>img{
+object-fit: cover; /* 写真の歪みを矯正する */
+object-position: right center;
+width: 100%;
+height: 100%;
+}
+main{
+width: 50%;
+}
+.g-nav{
+width: 50%;
+height: 50px;
+background-color: crimson;
+position: fixed;
+right: 0;
+top: 0;
+}
+.g-nav>ul{
+display: flex;
+}
+.g-nav li{
+width: 33.33%;
+}
+.g-nav a{
+display: block;
+text-align: center;
+line-height: 50px;
+color: #FFF;
+font-family: 'Allura', cursive;
+font-size: 36px;
+}
+.g-nav li:nth-of-type(n+2)>a{
+border-left: 1px solid #FFF;
+}
+.g-nav a:hover{
+background-color: #ac2f48;
+}
+.content-box{
+background-color: #f0edb1;
+padding-bottom: 30px;
+}
+.content-box>h2{
+text-align: center;
+font-size: 70px;
+padding: 100px 0 20px;
+font-family: 'Allura', cursive;
+}
+.main-box{
+max-width: 90%;
+margin: 0 auto;
+margin-bottom: 90px;
+}
+.main-box>h3{
+border-left: 10px solid #ac2f48;
+padding-left: 15px;
+margin:20px 0 40px;
+}
+.sub-wrapper{
+display: flex;
+padding: 25px;
+flex-wrap: wrap;
+text-align: center;
+}
+.sub-box{
+margin-bottom: 70px;
+}
+.sub-box>h3{
+margin-bottom: 30px;
+}
+.sub-box>img{
+max-width: 400px;
+}
+.sub-box>p{
+padding: 40px;
+line-height: 2;
+
+}
+footer{
+width: 100%;
+background-color: #319fa3;
+padding: 40px;
+position: relative;
+}
+.to-top{
+width: 50px;
+height: 50px;
+position: absolute;
+right: 70px;
+bottom: 40px;
+}
+
+/* フォーム部分 */
+form{
+width: 50%;
+}
+.form-list{
+display: flex;
+flex-wrap: wrap;
+}
+.form-list>dt{
+width: 30%;
+margin-bottom: 10px;
+}
+.form-list>dd{
+width: 70%;
+margin-bottom: 10px;
+}
+textarea{
+width: 260px;
+height: 120px;
+}
+
+@media (max-width:900px){
+.container{
+display: block;
+}
+.main-visual{
+width: 100%;
+height: 50vh;
+position: static; /* positionのキャンセル方法(初期値) */
+}
+main{
+width: 100%;
+}
+.g-nav{
+width: 100%;
+}
+.container:first-of-type{
+padding-top: 50px;
+}
+.sub-box>p{
+padding: 20px;
+line-height: 1.7;
+}
+.content-box>h2{
+font-size: 55px;
+
+}
+}
